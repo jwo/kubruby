@@ -1,0 +1,17 @@
+---
+title: Winning at Code
+date: 2014-06-27 18:50 UTC
+tags:
+---
+
+So what does it take to be successful in the field of programming? I'm not
+really sure, heh. You'll probably first need to be proficient in whatever primary
+language you're learning. After that? Well, I've made a chart to illustrate
+the process:
+
+```
+Learn more code
+When you're done, learn even more code
+...
+Profit
+```

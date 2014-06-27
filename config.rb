@@ -32,16 +32,16 @@ activate :blog do |blog|
 end
 
 # Required
-set :blog_url, 'http://www.example.com'
-set :blog_name, 'Middleman'
-set :blog_description, 'Makes developing websites simple.'
-set :author_name, 'Middleman'
-set :author_bio, 'Middleman is a static site generator using all the ' \
-                 'shortcuts and tools in modern web development.'
+set :blog_url, 'http://kuhruby.github.io'
+set :blog_name, 'kuhruby'
+set :blog_description, 'Ruby on Rails • 2014'
+set :author_name, ''
+set :author_bio, ''
+
 # Optional
 set :author_locaton, nil
 set :author_website, nil
-set :blog_logo, nil
+set :blog_logo, "theironyard.png"
 
 page '/feed.xml', layout: false
 
@@ -187,8 +187,18 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
+  set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+  # deploy.branch   = "custom-branch" # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = "custom-message"      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
